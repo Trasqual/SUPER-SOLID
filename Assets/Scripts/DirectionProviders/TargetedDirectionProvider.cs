@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TargetedDirectionProvider : DirectionProviderBase
 {
+    [Header("Debug")]
     [SerializeField] Vector3 _target = Vector3.zero;
 
     public void SetTarget(Vector3 target)
@@ -14,7 +15,7 @@ public class TargetedDirectionProvider : DirectionProviderBase
         _direction = (_target - transform.position).normalized;
     }
 
-    private void Update()
+    public override Vector3 GetDirection()
     {
         if (Vector3.Distance(_target, transform.position) > 0.1f)
         {
@@ -25,5 +26,7 @@ public class TargetedDirectionProvider : DirectionProviderBase
             transform.position = _target;
             _direction = Vector3.zero;
         }
+
+        return _direction;
     }
 }

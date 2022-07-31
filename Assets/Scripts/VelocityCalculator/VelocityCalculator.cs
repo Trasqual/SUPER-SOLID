@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class VelocityCalculator : MonoBehaviour
+public static class VelocityCalculator
 {
-    public Vector3 CalculatedVelocity(Vector3 dir, float speed)
+    public static Vector3 CalculateSimpleVelocity(Vector3 dir, float speed)
     {
         return speed * Time.deltaTime * dir;
     }

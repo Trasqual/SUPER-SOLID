@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class FixedDirectionProvider : DirectionProviderBase
 {
+    [Header("Debug")]
     [SerializeField] Vector3 _fixedDir;
 
     public void SetDirection(Vector3 dir)
