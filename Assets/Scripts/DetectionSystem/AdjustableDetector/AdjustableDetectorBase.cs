@@ -3,13 +3,13 @@ using UnityEngine;
 public abstract class AdjustableDetectorBase : DetectorBase
 {
     protected Vector3 _detectorPosition;
-    protected float _detectorRange = 10f;
+    protected float _detectionRange = 10f;
     protected LayerMask _detectionMask;
 
     public void Initialize(Vector3 pos, float range, LayerMask mask)
     {
         _detectorPosition = pos;
-        _detectorRange = range;
+        _detectionRange = range;
         _detectionMask = mask;
     }
 
@@ -20,7 +20,7 @@ public abstract class AdjustableDetectorBase : DetectorBase
 
     public void SetRange(float range)
     {
-        _detectorRange = range;
+        _detectionRange = range;
     }
 
     public void SetMask(LayerMask mask)

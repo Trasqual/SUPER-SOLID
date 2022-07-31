@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SphericalClosestTargetDetector : DetectorBase
+public class SphericalClosestTargetDetector : AdjustableDetectorBase
 {
     
     public override Transform GetTarget()
